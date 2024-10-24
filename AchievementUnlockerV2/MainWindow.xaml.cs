@@ -52,6 +52,22 @@ namespace AchievementUnlockerV2
             }
         }
 
+        private void DisableButtons(bool disable)
+        {
+            if (disable)
+            {
+                ConnectBtn.IsEnabled = false;
+                AchievementsBtn.IsEnabled = false;
+                AvatarAwardsBtn.IsEnabled = false;
+            }
+            else
+            {
+                ConnectBtn.IsEnabled = true;
+                AchievementsBtn.IsEnabled= true;
+                AvatarAwardsBtn.IsEnabled= true;
+            }
+        }
+
         private void ShowMessageBox(string message, string caption="Error")
         {
             mb = new XMessageBox(message, caption);
@@ -191,10 +207,12 @@ namespace AchievementUnlockerV2
         {
             try
             {
+                DisableButtons(true);
                 wf = new WaitForm();
                 wf.Show();
                 await Task.Run(() => WriteAchievements());
                 wf.Close();
+                DisableButtons(false);
             }
             catch(Exception ex)
             {
@@ -207,10 +225,12 @@ namespace AchievementUnlockerV2
         {
             try
             {
+                DisableButtons(true);
                 wf = new WaitForm();
                 wf.Show();
                 await Task.Run(() => WriteAvatarAwards());
                 wf.Close();
+                DisableButtons(false);
             }
             catch (Exception ex)
             {
@@ -221,7 +241,7 @@ namespace AchievementUnlockerV2
 
         private void SettingsBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            // ToDo : add a window for settings
         }
 
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
@@ -237,6 +257,16 @@ namespace AchievementUnlockerV2
                 ShowMessageBox(ex.Message, ex.GetType().ToString());
             }
            
+        }
+
+        private void cachedAddressesCheck_Checked(object sender, RoutedEventArgs e)
+        {
+            useCachedAddresses = true;
+        }
+
+        private void cachedAddressesCheck_Unchecked(object sender, RoutedEventArgs e)
+        {
+            useCachedAddresses = false;
         }
     }
 }

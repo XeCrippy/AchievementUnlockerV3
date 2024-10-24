@@ -1524,7 +1524,9 @@ namespace JRPCPlusPlus
                 console.WriteUInt64(assetIdPtr, (ulong)i);
                 console.CallVoid(avatarAssetCallAddr, 1, assetIdPtr, xoverlappedPtr);
 
-                while (console.ReadUInt32(xoverlappedPtr) != 0) Thread.Sleep(10);
+                //while (console.ReadUInt32(xoverlappedPtr) != 0) Thread.Sleep(10);
+
+                Thread.Sleep(10);
             }
             Thread.Sleep(50);
         }
@@ -1538,7 +1540,9 @@ namespace JRPCPlusPlus
                 console.WriteUInt64(achievementIdPtr, (ulong)i);
                 console.CallVoid(achievementCallAddr, 1, achievementIdPtr, xoverlappedPtr);
 
-                while (console.ReadUInt32(xoverlappedPtr) != 0) Thread.Sleep(20);
+                //while (console.ReadUInt32(xoverlappedPtr) != 0) Thread.Sleep(10);
+
+                Thread.Sleep(10);
             }
             Thread.Sleep(50);
         }
