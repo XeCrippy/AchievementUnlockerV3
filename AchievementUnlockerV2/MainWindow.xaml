@@ -1,0 +1,78 @@
+﻿<Window x:Class="AchievementUnlockerV2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AchievementUnlockerV2"
+        mc:Ignorable="d"
+        Height="400" Width="350" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Background="#FF2D2D30" BorderBrush="DodgerBlue" BorderThickness="1" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="Achievement Unlocker V2" Foreground="Silver" Margin="5,5,0,0" />
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top">
+            <Button Height="30" Width="30" Background="Transparent"
+                    BorderBrush="Transparent" Style="{DynamicResource ButtonStyle1}"
+                    ToolTip="Settings" x:Name="SettingsBtn" Click="SettingsBtn_Click">
+                <Image Source="/settings2.png" Height="20" Width="20"/>
+            </Button>
+            <Button Content="_" Style="{DynamicResource DefaultButton}" 
+                    Height="30" Width="30" Background="Transparent"
+                    Foreground="Silver" BorderBrush="Transparent" 
+                    x:Name="MinimizeBtn" Click="MinimizeBtn_Click"/>
+            <Button Content="X" Style="{DynamicResource CloseButton}" 
+                    Height="30" Width="30" Background="Transparent"
+                    Foreground="Silver" BorderBrush="Transparent"
+                    x:Name="CloseBtn" Click="CloseBtn_Click"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
+                    Grid.Row="1" Margin="10,19,10,10" VerticalAlignment="Center" Grid.ColumnSpan="2">
+            <Button x:Name="ConnectBtn" Click="ConnectBtn_Click" Height="135"
+                    Width="250" BorderBrush="DodgerBlue" Background="#FF343437"
+                    Style="{DynamicResource ButtonStyle1}">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/wifi100x100.png" Height="100" Width="120"/>
+                    <TextBlock Text="Connect" TextAlignment="Center" Foreground="Silver"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="2">
+            <Button Height="135" Width="120" Background="#FF343437"
+                    BorderBrush="DodgerBlue" Margin="5" Style="{DynamicResource ButtonStyle1}"
+                    x:Name="AchievementsBtn" Click="AchievementsBtn_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/achievement3.png" Height="110"/>
+                    <TextBlock Text="Achievements" TextAlignment="Center" Foreground="Silver" Margin="0,0,0,10"/>
+                </StackPanel>
+        </Button>
+
+            <Button Height="135" Width="120" Background="#FF343437"
+                    BorderBrush="DodgerBlue" Margin="5" Style="{DynamicResource ButtonStyle1}"
+                    x:Name="AvatarAwardsBtn" Click="AvatarAwardsBtn_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/avatarawards.png" Height="110" Width="110"/>
+                    <TextBlock Text="Avatar Awards" TextAlignment="Center" Foreground="Silver" Margin="0,0,0,10"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <TextBlock Text="Created by Xe" Foreground="Silver"
+                   Grid.Column="0" Grid.Row="3" Margin="10,17,0,0"/>
+        <TextBlock Text="Crippy" Foreground="DodgerBlue" Grid.Row="3"
+                   Grid.Column="0" Margin="85,17,0,0"/>
+        <TextBlock Foreground="DodgerBlue"
+                   Grid.Row="3" Grid.Column="1" Margin="0,17,0,0">
+            <Hyperlink NavigateUri="https://github.com/XeCrippy/AchievementUnlocker"
+                       RequestNavigate="Hyperlink_RequestNavigate">Source Code</Hyperlink>
+        </TextBlock>
+    </Grid>
+</Window>

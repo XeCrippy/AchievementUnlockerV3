@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Icon_.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="achievement3.png" />
+    <None Remove="avatarawards.png" />
+    <None Remove="settings2.png" />
+    <None Remove="wifi100x100.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Icon_.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="JsonHelper">
+      <HintPath>..\..\..\..\Libraries\JsonHelper\JsonHelper\bin\Release\net6.0\JsonHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="XDevkit">
+      <HintPath>..\..\..\MW3CbufTesting\MW3CbufTesting\xdevkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="achievement3.png" />
+    <Resource Include="avatarawards.png" />
+    <Resource Include="settings2.png" />
+    <Resource Include="wifi100x100.png" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,29 @@
+﻿<Window x:Class="AchievementUnlockerV2.WaitForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AchievementUnlockerV2"
+        mc:Ignorable="d"
+        Title="WaitForm" Height="100" Width="300" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" ResizeMode="NoResize" Background="#FF2D2D30" 
+        BorderBrush="DodgerBlue" BorderThickness="1" Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <TextBlock x:Name="CaptionBox"
+                       Margin="20,5,5,5" TextAlignment="Left"
+                       Foreground="Silver"
+                       Text="Working" FontSize="22"/>
+            <TextBlock Margin="20,0,5,5" Text="Please wait...."
+                       TextAlignment="Left" Foreground="Silver"
+                       FontSize="14" x:Name="DescriptionBox"/>
+            <ProgressBar Height="20" Width="260"
+                         Foreground="DodgerBlue" 
+                         Background="#FF3C3C41"
+                         BorderBrush="DodgerBlue"
+                         Margin="5,0,5,5"
+                         x:Name="progressBar1"
+                         IsIndeterminate="True"/>
+        </StackPanel> 
+    </Grid>
+</Window>
