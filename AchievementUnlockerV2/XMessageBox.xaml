@@ -18,12 +18,12 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0" Background="#FF232326">
             <TextBlock x:Name="CaptionBox" Foreground="Silver"
                        Margin="10,8,0,0" TextAlignment="Left"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="0"
-                    Grid.Column="1">
+                    Grid.Column="1" Background="#FF232326">
             <Button Content="X" Foreground="Silver"
                     Style="{DynamicResource CloseButton}"
                     Height="30" Width="30" Background="Transparent"

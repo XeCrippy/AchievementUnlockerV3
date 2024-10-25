@@ -1524,9 +1524,9 @@ namespace JRPCPlusPlus
                 console.WriteUInt64(assetIdPtr, (ulong)i);
                 console.CallVoid(avatarAssetCallAddr, 1, assetIdPtr, xoverlappedPtr);
 
-                //while (console.ReadUInt32(xoverlappedPtr) != 0) Thread.Sleep(10);
+                while (console.ReadUInt32(xoverlappedPtr) != 0) Thread.Sleep(10);
 
-                Thread.Sleep(10);
+                //Thread.Sleep(10);
             }
             Thread.Sleep(50);
         }
@@ -1540,9 +1540,11 @@ namespace JRPCPlusPlus
                 console.WriteUInt64(achievementIdPtr, (ulong)i);
                 console.CallVoid(achievementCallAddr, 1, achievementIdPtr, xoverlappedPtr);
 
-                //while (console.ReadUInt32(xoverlappedPtr) != 0) Thread.Sleep(10);
+                // with some games this line causes it to get stuck in a sleep loop. I haven't looked to deep into it and it's only some games
+                // if you encounter it then comment this line out and use the normal sleep method that's currently commented below
+                while (console.ReadUInt32(xoverlappedPtr) != 0) Thread.Sleep(10);
 
-                Thread.Sleep(10);
+                //Thread.Sleep(20);
             }
             Thread.Sleep(50);
         }
