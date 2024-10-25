@@ -46,7 +46,7 @@
                     Width="250" BorderBrush="DodgerBlue" Background="#FF343437"
                     Style="{DynamicResource ButtonStyle1}">
                 <StackPanel Orientation="Vertical">
-                    <Image Source="/wifi100x100.png" Height="100" Width="120"/>
+                    <Image Height="100" Width="120" Source="/wifi100x100.png"/>
                     <TextBlock Text="Connect" TextAlignment="Center" Foreground="Silver"/>
                 </StackPanel>
             </Button>
@@ -65,7 +65,7 @@
                     BorderBrush="DodgerBlue" Margin="5" Style="{DynamicResource ButtonStyle1}"
                     x:Name="AvatarAwardsBtn" Click="AvatarAwardsBtn_Click">
                 <StackPanel Orientation="Vertical">
-                    <Image Source="/avatarawards.png" Height="110" Width="110"/>
+                    <Image Height="110" Width="110" Source="/avatarawards.png"/>
                     <TextBlock Text="Avatar Awards" TextAlignment="Center" Foreground="Silver" Margin="0,0,0,10"/>
                 </StackPanel>
             </Button>

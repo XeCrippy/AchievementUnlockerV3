@@ -1,0 +1,66 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "AchievementUnlockerV2/1.0.0": {
+        "dependencies": {
+          "JsonHelper": "1.0.0.0",
+          "xdevkit": "2.0.21256.0"
+        },
+        "runtime": {
+          "AchievementUnlockerV2.dll": {}
+        }
+      },
+      "JsonHelper/1.0.0.0": {
+        "runtime": {
+          "JsonHelper.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "xdevkit/2.0.21256.0": {
+        "runtime": {
+          "xdevkit.dll": {
+            "assemblyVersion": "2.0.21256.0",
+            "fileVersion": "2.0.21256.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.0.0": {
+        "runtime": {
+          "Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.3.27908"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AchievementUnlockerV2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "JsonHelper/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "xdevkit/2.0.21256.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newtonsoft.Json/13.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

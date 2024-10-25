@@ -3,6 +3,8 @@ using JsonHelper;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using XDevkit;
 
@@ -59,17 +61,20 @@ namespace AchievementUnlockerV2
                 ConnectBtn.IsEnabled = false;
                 AchievementsBtn.IsEnabled = false;
                 AvatarAwardsBtn.IsEnabled = false;
+                CloseBtn.IsEnabled = false;
             }
             else
             {
                 ConnectBtn.IsEnabled = true;
                 AchievementsBtn.IsEnabled= true;
                 AvatarAwardsBtn.IsEnabled= true;
+                CloseBtn.IsEnabled = true;
             }
         }
 
-        private void ShowMessageBox(string message, string caption="Error")
+        private void ShowMessageBox( string message, string caption="Error")
         {
+            
             mb = new XMessageBox(message, caption);
             mb.ShowDialog();
         }
@@ -122,7 +127,7 @@ namespace AchievementUnlockerV2
 
                 if (useCachedAddresses && address != 0)
                 {
-                    console.XUserWriteAchievements(address, xamfreemem, xamfreemem + 0x8, 36);
+                    console.XUserAwardAvatarAsset(address, xamfreemem, xamfreemem + 0x8, 36);
                 }
                 else
                 {
@@ -172,6 +177,7 @@ namespace AchievementUnlockerV2
         {
             try
             {
+                //string iconPath = "pack://application:,,,/AchievementUnlockerV2;component/Images/avatarawards.png";
                 wf = new WaitForm();
                 wf.Show();
                 await Task.Run(() => Connect());
@@ -180,6 +186,8 @@ namespace AchievementUnlockerV2
                 {
                     ShowMessageBox("Failed to connect to default console!", "Connection Error");
                 }
+                else
+                    ShowMessageBox("Connected!", "Connection");
             }
             catch (Exception ex)
             {

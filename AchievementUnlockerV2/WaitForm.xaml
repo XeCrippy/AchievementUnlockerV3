@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="WaitForm" Height="100" Width="300" WindowStartupLocation="CenterScreen"
         WindowStyle="None" ResizeMode="NoResize" Background="#FF2D2D30" 
-        BorderBrush="DodgerBlue" BorderThickness="1" Loaded="Window_Loaded">
+        BorderBrush="DodgerBlue" BorderThickness="1" Loaded="Window_Loaded" Topmost="True">
     <Grid>
         <StackPanel Orientation="Vertical">
             <TextBlock x:Name="CaptionBox"
