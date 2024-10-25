@@ -76,7 +76,7 @@
                    Grid.Column="0" Margin="85,17,0,0"/>
         <TextBlock Foreground="DodgerBlue"
                    Grid.Row="3" Grid.Column="1" Margin="0,17,0,0">
-            <Hyperlink NavigateUri="https://github.com/XeCrippy/AchievementUnlocker"
+            <Hyperlink NavigateUri="https://github.com/XeCrippy/AchievementUnlockerV3"
                        RequestNavigate="Hyperlink_RequestNavigate">Source Code</Hyperlink>
         </TextBlock>
     </Grid>

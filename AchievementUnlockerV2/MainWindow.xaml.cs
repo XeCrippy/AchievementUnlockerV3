@@ -248,7 +248,7 @@ namespace AchievementUnlockerV2
         {
             try
             {
-                string url = "https://github.com/XeCrippy/AchievementUnlocker";
+                string url = "https://github.com/XeCrippy/AchievementUnlockerV3";
                 Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
                 e.Handled = true;
             }
