@@ -35,8 +35,7 @@ void Testing() {
     // Define an example achievement
     XUSER_ACHIEVEMENT achievement = {};
     achievement.dwAchievementId = 1;           // The achievement ID
-    achievement.dwProgress = 100;             // Progress percentage (100 for completion)
-    achievement.dwUnlockTime = time(nullptr); // Current timestamp for unlock time
+    achievement.dwUserIndex = 0;
 
     // Create an array of achievements (even for one achievement)
     XUSER_ACHIEVEMENT achievements[] = { achievement };
