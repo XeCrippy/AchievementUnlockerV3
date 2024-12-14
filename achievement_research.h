@@ -1,4 +1,4 @@
-void search_memory(void* start_address, size_t length, uint32_t target_value, uint32_t target_value_2) {
+/*void search_memory(void* start_address, size_t length, uint32_t target_value, uint32_t target_value_2) {
 		uint8_t* mem = (uint8_t*)start_address;
 		uint32_t test = 0x82000000;
 
@@ -17,7 +17,7 @@ void search_memory(void* start_address, size_t length, uint32_t target_value, ui
 
 	void achievementUnlocker::LocateXUserWriteAchievements() {
 	     search_memory((void*)0x82000000, 0x1000000, 0x60840008, 0x38e00008);
-	}
+	}*/
 
 //
 //
