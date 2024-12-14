@@ -24,8 +24,7 @@ void search_memory(void* start_address, size_t length, uint32_t target_value, ui
 //
 typedef struct _XUSER_ACHIEVEMENT {
     DWORD dwAchievementId;   // Unique ID for the achievement
-    DWORD dwProgress;        // Progress percentage (0 to 100)
-    time_t dwUnlockTime;     // Unlock timestamp
+    DWORD dwUserIndex;
 } XUSER_ACHIEVEMENT, *PXUSER_ACHIEVEMENT;
 
 //Example function to demonstrate usage of XUserWriteAchievements
